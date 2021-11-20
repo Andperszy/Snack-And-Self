@@ -1,5 +1,5 @@
 <!-- Variables -->
-[pageswebsite]: https://andperszy.github.io/Snack-and-Self
+[website]: https://sns.andperszy.cf/
 
 # Snack-and-Self
 A website for a school project.
@@ -10,4 +10,4 @@ If you think something is wrong with the code you can create a pull request :)
 
 ## Test it
 
-You can see the website running with the latest code with [Github pages][pageswebsite].
+You can see the website running with the latest code with [Github pages][website].
