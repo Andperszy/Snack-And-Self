@@ -1,0 +1,132 @@
+body{
+	background:  url(./IMG/BW\ back.png);
+	background-size: cover;
+	background-position: center;
+	
+}
+
+h1{
+	font-family: Bodomy MT;
+	color: white;
+	font-size: 400%;
+	text-align: center;
+	padding: auto;
+	padding: 400px 0;
+  	
+}
+
+h2{
+	font-family: Bodomy MT;
+	color: white;
+	font-size: 200%;
+	position:sticky;
+	padding: 200px;	
+}
+
+h3{
+	font-family: Bodomy MT;
+	color: white;
+	font-size: 150%;
+	position:relative;
+    padding: auto ;
+    left: auto; 
+    margin-bottom: -10px;
+
+}
+
+h4{
+	font-family: Bodomy MT;
+	color: white;
+	font-size: 150%;
+	position:relative;
+    padding-top: 30px ;
+    left: auto; 
+    margin-bottom: -10px;
+
+}
+
+
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    background: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+
+.burger-wrapper {
+  cursor: pointer;
+}
+#meny {
+    background: #333;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+#menyAvPaa {
+    display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+    transform: translateX(0rem);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#burger > div {
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#menyAvPaa:checked ~ #burger > div {
+  background-color: #fff;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+nav li{
+    content:none;    
+}
+nav#meny{
+    content: none;
+}
