@@ -1,7 +1,7 @@
 <!-- Variables -->
 [website]: https://sns.andperszy.cf/
 
-# Snack-and-Self
+# Snack and Self
 A website for a school project.
 
 This is still in developpement and it is not the final product.
