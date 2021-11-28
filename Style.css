@@ -1,3 +1,7 @@
+*{
+	user-select: none;
+}	
+
 body{
 	background:  url(./IMG/BW\ back.png);
 	background-size: cover;
@@ -12,7 +16,7 @@ h1{
 	font-size: 400%;
 	text-align: center;
 	padding: 400px 0;
-  	
+	letter-spacing: 0.1rem;
 }
 
 h2{
