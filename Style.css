@@ -1,8 +1,13 @@
+*{
+	user-select: none;
+}	
+
 body{
 	background:  url(./IMG/BW\ back.png);
 	background-size: cover;
 	background-position: center;
-	
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 h1{
@@ -10,9 +15,8 @@ h1{
 	color: white;
 	font-size: 400%;
 	text-align: center;
-	padding: auto;
 	padding: 400px 0;
-  	
+	letter-spacing: 0.1rem;
 }
 
 h2{
@@ -130,3 +134,4 @@ nav li{
 nav#meny{
     content: none;
 }
+
