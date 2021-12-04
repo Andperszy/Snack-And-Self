@@ -4,10 +4,10 @@
 # Snack and Self
 A website for a school project.
 
-This is still in developpement and it is not the final product.
+This is a work in progress and not the finished result.
 
-If you think something is wrong with the code you can create a pull request :)
+You can create a pull request if you think something is incorrect with the code.
 
 ## Test it
 
-You can see the website running with the latest code with [Github pages][website].
+With [Github Pages][website], you can see the website running with the most recent code.
