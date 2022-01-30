@@ -1,6 +1,7 @@
-/*General Option*/ 
+/*General Option Start*/ 
  *{
 	user-select: none;
+    
 }	
 
 body{
@@ -9,8 +10,20 @@ body{
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+
 	overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+
+/*General Option End*/ 
+
+
+
 
 
 /* Police option Start*/
@@ -18,7 +31,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'SF Mono Regular', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 h1{
-    	color: white;
+    color: white;
 	font-size: 400%;
 	text-align: center;
 	padding: 400px 0;
@@ -52,36 +65,91 @@ h4{
 
 }
 
+h5{
+    text-align: center;
+    font-size: 400%;
+    color: white;
+    user-select: all;
+  }
+
+h6{
+    display: block;
+    font-size: 2em;
+    margin-top: -0.001em;
+    margin-bottom: 0.67em;
+    margin-left: 0.1em;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
 /* Police option End*/
 
-/* Link option Start*/
 
-a:link {
+
+
+
+/* Link option Start*/
+    /* Link option menu Start*/
+.menu a:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
   }
-  a:visited {
+.menu a:visited {
     color: white;
     background-color: transparent;
     text-decoration: none;
   }
-  a:hover {
+.menu a:hover {
     color: white;
     background: transparent;
     text-decoration: none;
   }
-  a:active {
+.menu a:active {
     color: white;
     background-color: transparent;
     text-decoration: none;
   }
+  /* Link option menu End*/
+
+ /* Link option Card Start*/
+ .card a:link {
+    color: rgb(52, 73, 94);
+    background-color: transparent;
+    text-decoration: none;
+  }
+.card a:visited {
+    color: rgb(52, 73, 94);
+    background-color: transparent;
+    text-decoration: none;
+  }
+.card a:hover {
+    color: rgb(52, 73, 94);
+    background: transparent;
+    text-decoration: none;
+  }
+.card a:active {
+    color: rgb(52, 73, 94);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+ /* Link option Card End*/
+
 /* Link option End*/  
+
+
+
+
+
+
+
 
 /* Burger Menu Start*/
 .burger-wrapper {
   cursor: pointer;
 }
+
 #meny {
     background: #333;
     width: 280px;
@@ -94,6 +162,7 @@ a:link {
     z-index: 0;
     transition: 0.5s;
 }
+
 #menyAvPaa {
     display: none;
 }
@@ -113,6 +182,7 @@ a:link {
     justify-content: space-between;
     flex-direction: column;
 }
+
 #burger > div {
     height: 2px;
     background-color: #fff;
@@ -127,14 +197,14 @@ a:link {
 #menyAvPaa:checked ~ #burger > div:nth-child(1) {
     transform: translateY(15px) rotate(45deg);
 }
+
 #menyAvPaa:checked ~ #burger > div:nth-child(2) {
     opacity: 0;
 }
+
 #menyAvPaa:checked ~ #burger > div:nth-child(3) {
     transform: translateY(-15px) rotate(-45deg);
 }
-
-/* Burger Menu end*/
 
 nav li{
     content:none;    
@@ -142,4 +212,60 @@ nav li{
 nav#meny{
     content: none;
 }
+
+/* Burger Menu end*/
+
+
+
+
+
+ /*Cards Start*/
+  .card{
+    width: 250px;
+    height: 250px;
+    margin: 2em;
+    display: flex;
+    justify-content: column;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s;
+  }
+  
+  .card:hover{ color: white;}
+  
+  .card::before, .card::after{
+    content: '';
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(52, 73, 94);
+    z-index: -1;
+    border-radius: 10px;
+    transition: all .4s;
+  }
+  
+  .card::after{
+    background: #F4D03F;
+    transform-origin: right bottom;
+    transform:  translate(10%, 10%) scale(0.3);
+    border-radius: 50%;
+    transition: all .4s;
+  }
+  
+  .card:hover::after{
+    transform: translate(0) scale(1);
+    border-radius: 0;
+    border-radius: 10px;
+  }
+  
+  .card:hover::before{
+    transform-origin: right bottom;
+    transform: translate(10%, 10%) scale(0.3);
+    border-radius: 50%;
+    z-index: 1;
+  }
+    /*Credit to @coding_gyan on instagram for the card section*/
+ /*Cards End*/
 
