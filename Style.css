@@ -6,6 +6,7 @@
 
 body{
 	background:  url(./IMG/BW\ back.png);
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
