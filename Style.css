@@ -3,9 +3,9 @@
 	user-select: none;
     
 }	
-
+/* 
 body{
-	background:  url(./IMG/BW\ back.png);
+  background: #000;
 	background-color: black;
 	background-size: cover;
 	background-position: center;
@@ -18,6 +18,37 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+} */
+
+
+body{
+  --primary-color: #e7e0ee ;
+  --sec-color: #f3f1f5 ;
+  --menu-color: #DB6400 ;
+  --menu-colorREV: #166974 ;
+  --Burger-color: #0f0f0f;
+  --hover-color: #11052c;
+  --color: #1f1f1f;
+  --text-color: #1a1a1a;
+}
+body[data-theme="dark"]{
+  --primary-color: #0f0f0f;
+  --menu-color: #166974 ;
+  --menu-colorREV: #DB6400 ;
+  --Burger-color: #e7e0ee;
+  --hover-color: #ededed;
+  --text-color: #f0f0f0;
+  --sec-color: #1a1a1a;
+  --color: #f0f0f0;
+}
+
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary-color);
+  color: var(--color);
 }
 
 .MenuCantine {
@@ -34,46 +65,21 @@ body{
 /* Police option Start*/
 *{
     font-family: -apple-system, BlinkMacSystemFont, 'SF Mono Regular', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 h1{
-    color: white;
 	font-size: 400%;
 	text-align: center;
 	padding: 400px 0;
 	letter-spacing: 0.1rem;
 }
 
-h2{
-	color: white;
-	font-size: 200%;
-	position:sticky;
-	padding: 200px;	
-}
-
-h3{
-	color: white;
-	font-size: 150%;
-	position:relative;
-    padding: auto ;
-    left: auto; 
-    margin-bottom: -10px;
-
-}
-
-h4{
-	color: white;
-	font-size: 150%;
-	position:relative;
-    padding-top: 30px ;
-    left: auto; 
-    margin-bottom: -10px;
-
-}
-
 h5{
     text-align: center;
     font-size: 400%;
-    color: white;
     user-select: all;
   }
 
@@ -85,33 +91,103 @@ h6{
     margin-left: 0.1em;
     margin-right: 0;
     font-weight: bold;
+    color: var(--menu-colorREV);
+  }
+
+  h1.NavH{
+   font-size: 30px;
+   position: relative;
+   padding-top: 100px;
+   padding-bottom: 5px;
+   
   }
 
 /* Police option End*/
 
+/*Dark Mode Start*/
+.btn{
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
 
+  margin-top: 1em;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+  cursor: pointer;
+  background: var(--sec-color);
+  color: var(--color);
+  transition: all .4s;
+}
+
+.btn:hover{
+  background: var(--hover-color);
+  color: var(--text-color);
+} 
+
+.DarkMode{
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  color: var(--color);
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.DarkMode .box{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color);
+  transition: all .4s;
+}
+
+.DarkMode input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+
+.DarkMode input:checked ~ .box{
+  transform: rotate(180deg);
+}
+
+.DarkMode input:checked ~ .box i{
+  transform: rotate(180deg);
+  
+} 
+/*Dark Mode End*/
 
 
 
 /* Link option Start*/
     /* Link option menu Start*/
 .menu a:link {
-    color: white;
+    color: var(--text-color);
     background-color: transparent;
     text-decoration: none;
   }
 .menu a:visited {
-    color: white;
+    color: var(--text-color);
     background-color: transparent;
     text-decoration: none;
   }
 .menu a:hover {
-    color: white;
+    color: var(--text-color);
     background: transparent;
     text-decoration: none;
   }
 .menu a:active {
-    color: white;
+    color: var(--text-color);
     background-color: transparent;
     text-decoration: none;
   }
@@ -119,22 +195,22 @@ h6{
 
  /* Link option Card Start*/
  .card a:link {
-    color: rgb(52, 73, 94);
+    color: var(--menu-colorREV);
     background-color: transparent;
     text-decoration: none;
   }
 .card a:visited {
-    color: rgb(52, 73, 94);
+    color: var(--menu-colorREV);
     background-color: transparent;
     text-decoration: none;
   }
 .card a:hover {
-    color: rgb(52, 73, 94);
+    color: var(--menu-colorREV);
     background: transparent;
     text-decoration: none;
   }
 .card a:active {
-    color: rgb(52, 73, 94);
+    color: var(--menu-colorREV);
     background-color: transparent;
     text-decoration: none;
   }
@@ -156,16 +232,36 @@ h6{
 }
 
 #meny {
-    background: #333;
+    /* background: var(--menu-color);
     width: 280px;
     height: 100vh;
+    border-radius: 10px;
     position: fixed;
     right: 0;
     transition-timing-function: cubic-bezier(10,2,3,1);
     transform: translateX(50rem);
-    top: 0;
+    top: 1px;
     z-index: 0;
+    transition: 0.5s; */
+
+
+
+    box-sizing: border-box;
+
+    position: fixed;
+    width: 220px;
+    height: 830px;
+    right: 1px;
+    top: 2px;
+    background: var(--menu-color);
+    border: 0.1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
     transition: 0.5s;
+    transform: translateX(50rem);
+    transition-timing-function: cubic-bezier(10,2,3,1);
+
+
 }
 
 #menyAvPaa {
@@ -190,13 +286,13 @@ h6{
 
 #burger > div {
     height: 2px;
-    background-color: #fff;
+    background-color: var(--Burger-color);
     transition: 0.5s;
     z-index: 999;
 }
 
 #menyAvPaa:checked ~ #burger > div {
-  background-color: #fff;
+  background-color: var(--Burger-color);
 }
 
 #menyAvPaa:checked ~ #burger > div:nth-child(1) {
@@ -245,14 +341,14 @@ nav#meny{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(52, 73, 94);
+    background: var(--menu-colorREV);
     z-index: -1;
     border-radius: 10px;
     transition: all .4s;
   }
   
   .card::after{
-    background: #F4D03F;
+    background: var(--menu-color);
     transform-origin: right bottom;
     transform:  translate(10%, 10%) scale(0.3);
     border-radius: 50%;

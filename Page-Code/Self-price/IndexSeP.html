@@ -5,6 +5,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../Style.css">
 	<link rel="icon" type="image/png" href="../../logo.png" />
     <title>Self Price</title>
@@ -13,10 +14,51 @@
 
 
 <body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <p class="jumbotron"> Login : <input type="text" v-model="user"/> connecter en tant que {{user}}</p>
+        </div>
+        
+        <h1 class="display-4" v-if="commandes.length > 0">Commande disponible</h1>
+        <ul>
+            <li v-for="commandes in commandes">{{commandes}}</li>
+        </ul>
+
+        <h1 class="display-4">Produit disponible</h1>
+        <div class="row">
+            <div class="col-3" v-for="produits in produits">
+                <p class="jumbotron">
+                    {{produits}} <br>
+                    <button v-on:click="commander(produits)">Commander</button>
+                </p>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data : {
+                user : "Eliott", 
+                produits : ["pizza", "hamburger", "cheesecake", "tacos"],
+                commandes : []
+            },
+
+            methods:{
+                commander: function(){
+                    console.log("ca marhce");
+                },   
+                commander: function(produits){
+                    console.log(produits);
+                },      
+                commander: function(produits){
+                    this.commandes.push(produits);
+                },   
+            }     
+        })
+    </script>
 	
-	<h1></h1>
-	
-</body>
+</>
 
 <header>
     <input type="checkbox" id="menyAvPaa">
