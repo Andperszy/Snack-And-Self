@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Style.css">
+    <link rel="icon" type="image/png" href="../../logo.png" />
+    <title>Prix Self V-show</title>
+
+</head>
+<header>
+    <input type="checkbox" id="menyAvPaa">
+    <label id="burger" for="menyAvPaa">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <nav id="meny">
+
+        <ul class="menu">
+            <ul class="sous">
+
+                <h2><a href="../Snack-price/IndexSnP.html">Prix Snack</a></h2>
+                <h2><a href="../Snack-menu/IndexSnM.html">Menu Snack</a></h2>
+                <h2><a href="../Self-menu/IndexSeM.html">Menu Self</a></h2>
+                <h2><a href="../Contact/Contact.html">Contact</a></h2>
+                <h2 class="NavH"><a href="../Panier/panier.html">PNR H2 CSS PNR Replace PNG swap 3rd place</a>
+            </ul>
+        </ul>
+
+        <!-- <script src="../../JS/scriptDT.js" async></script>
+
+        <body data-theme="">
+            <div class="switch">
+                <input id="switchIN" class="input" type="checkbox" />
+                <div class="circle"></div> -->
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <p class="jumbotron"> Login : <input type="text" v-model="user" /> connecter en tant que {{user}}</p>
+            </div>
+
+            <h1 class="display-4" v-if="commandes.length > 0">Commande disponible</h1>
+            <ul>
+                <li v-for="commandes in commandes">{{commandes}}</li>
+            </ul>
+
+            <h1 class="display-4">Produit disponible</h1>
+            <div class="row">
+                <div class="col-3" v-for="produits in produits">
+                    <p class="jumbotron">
+                        {{produits}} <br>
+                        <button v-on:click="commander(produits)">Commander</button>
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                var app = new Vue({
+                    el: "#app",
+                    data: {
+                        user: "Eliott",
+                        produits: ["pizza", "hamburger", "cheesecake", "tacos"],
+                        commandes: []
+                    },
+
+                    methods: {
+                        commander: function () {
+                            console.log("ca marhce");
+                        },
+                        commander: function (produits) {
+                            console.log(produits);
+                        },
+                        commander: function (produits) {
+                            this.commandes.push(produits);
+                        },
+                    }
+                })
+            </script>
+
+            </>
+
+
+            <main>
+            </main>
+
+
+</html>

@@ -1,0 +1,511 @@
+/* General Option Start*/
+* {
+  user-select: none;
+
+}
+
+html,
+body.index {
+  margin: 0;
+  height: 100%;
+}
+
+
+/* 
+body{
+  background: #000;
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+@media (prefers-color-scheme: light) {
+  body {
+    --primary-color: #e7e0ee;
+    --menu-color: #e7e0ee;
+    --Burger-color: #0f0f0f;
+    --hover-color: #11052c;
+    --primary-text-color: #1a1a1a;
+    --second-text-color: #1a1a1a;
+    --sec-color: #f3f1f5;
+    --color: #1f1f1f;
+    --border-color: #ffffff46;
+    --box-shadow-color: #00000015;
+    --background-loader: #ffffff00;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --primary-color: #0f0f0f;
+    --menu-color: #0f0f0f;
+    --Burger-color: #e7e0ee;
+    --hover-color: #ededed;
+    --primary-text-color: #f0f0f0;
+    --second-text-color: #f0f0f0;
+    --sec-color: #1a1a1a;
+    --color: #f0f0f0;
+    --border-color: #ffffff46;
+    --box-shadow-color: #00000015;
+    --background-loader: #ffffff00;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: var(--primary-color);
+  color: var(--color);
+}
+
+.MenuCantine {
+  max-width: 100%;
+  height: 800px;
+}
+
+/*General Option End*/
+
+.lordiconcart {
+
+  width: 250px;
+  height: 250px;
+}
+
+
+
+/* Police option Start*/
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Mono Regular', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 400%;
+  text-align: center;
+  padding: 400px 0;
+  letter-spacing: 0.1rem;
+  color: var(--primary-text-color);
+}
+
+h2 {
+  font-size: 200%;
+  text-align: left;
+  margin-left: 10px;
+  padding: 60px 0;
+  letter-spacing: 0.1rem;
+  color: var(--second-text-color);
+}
+
+
+h5 {
+  text-align: center;
+  font-size: 400%;
+  user-select: all;
+}
+
+h6 {
+  display: block;
+  font-size: 2em;
+  margin-top: -0.004em;
+  margin-bottom: 0.67em;
+  margin-left: 0.2em;
+  margin-right: 0;
+  font-weight: bold;
+  color: var(--menu-color);
+}
+
+h1.NavH {
+  font-size: 30px;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 5px;
+
+}
+
+img.imgMont {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+img.SIMG {
+  max-width: 30%;
+  max-height: 30%;
+  position: relative;
+  align-content: center;
+}
+
+/* Police option End*/
+
+/* Link option Start*/
+/* Link option menu Start*/
+.menu a:link {
+  color: var(--text-color);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: var(--text-color);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--text-color);
+  background: transparent;
+  text-decoration: none;
+}
+
+.menu a:active {
+  color: var(--text-color);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Link option menu End*/
+
+/* Link option Card Start*/
+.card a:link {
+  color: var(--menu-colorREV);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.card a:visited {
+  color: var(--menu-colorREV);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--menu-colorREV);
+  background: transparent;
+  text-decoration: none;
+}
+
+.card a:active {
+  color: var(--menu-colorREV);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Link option Card End*/
+
+/* Link option End*/
+
+
+
+
+
+
+
+
+/* Burger Menu Start*/
+.burger-wrapper {
+  cursor: pointer;
+}
+
+#meny {
+  /* background: var(--menu-color);
+    width: 280px;
+    height: 100vh;
+    border-radius: 10px;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 1px;
+    z-index: 0;
+    transition: 0.5s; */
+
+
+
+  box-sizing: border-box;
+
+  position: fixed;
+  width: 220px;
+  height: 99%;
+  right: 1px;
+  top: 2px;
+  background: var(--menu-color);
+  border: none;
+  box-shadow: 0px 4px 4px var(--Burger-color);
+  border-radius: 40px;
+  transition: 0.5s;
+  transform: translateX(50rem);
+  transition-timing-function: cubic-bezier(10, 2, 3, 1);
+
+
+}
+
+#menyAvPaa {
+  display: none;
+}
+
+#menyAvPaa:checked~#meny {
+  transform: translateX(0rem);
+}
+
+#burger {
+  position: fixed;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#burger>div {
+  height: 2px;
+  background-color: var(--Burger-color);
+  transition: 0.5s;
+  z-index: 999;
+}
+
+#menyAvPaa:checked~#burger>div {
+  background-color: var(--Burger-color);
+}
+
+#menyAvPaa:checked~#burger>div:nth-child(1) {
+  transform: translateY(15px) rotate(45deg);
+}
+
+#menyAvPaa:checked~#burger>div:nth-child(2) {
+  opacity: 0;
+}
+
+#menyAvPaa:checked~#burger>div:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+nav li {
+  content: none;
+}
+
+nav#meny {
+  content: none;
+}
+
+/* Burger Menu end*/
+
+
+
+
+
+/*Cards Start*/
+.card {
+  width: 250px;
+  height: 250px;
+  margin: 2em;
+  display: flex;
+  justify-content: column;
+  position: relative;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.card:hover {
+  color: var(--Burger-color);
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--menu-color);
+  z-index: -1;
+  border-radius: 10px;
+  transition: all .4s;
+}
+
+.card::after {
+  background: var(--Burger-color);
+  transform-origin: right bottom;
+  transform: translate(10%, 10%) scale(0.3);
+  border-radius: 50%;
+  transition: all .4s;
+  box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, .35);
+
+}
+
+.card:hover::after {
+  transform: translate(0) scale(1);
+  border-radius: 0;
+  border-radius: 10px;
+}
+
+.card:hover::before {
+  transform-origin: right bottom;
+  transform: translate(10%, 10%) scale(0.3);
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, .35);
+}
+
+/*Credit to @coding_gyan on Instagram for the card section*/
+/*Cards End*/
+
+
+/*Button Dowload start*/
+.buttonDL {
+  display: inline-block;
+  outline: none;
+  background-color: transparent;
+  background-position-x: center;
+  background-position-y: bottom;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--Burger-color);
+  color: var(--Burger-color);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  rotate: 90deg;
+}
+
+.buttonDL.active {
+  /* left: 50% + 110px; */
+  font-size: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border-left-color: transparent;
+  animation: rotate .8s ease 0.5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.buttonDL.success {
+  position: relative;
+  border-color: green;
+  animation: bounce .3s ease-in;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.9);
+  }
+}
+
+.buttonDL.success::before {
+  content: '';
+  position: relative;
+  background: url('./IMG/check-solid-svgrepo-com.svg') no-repeat;
+  left: 0px;
+  right: 0px;
+  top: 8px;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}
+
+lord-icon.Lord-icon1 {
+  width: 50px;
+  height: 50px;
+}
+
+/*Button Dowload end */
+
+/* animation Panier start */
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::before {
+  content: '';
+  background: var(--background-loader);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  width: 140px;
+  height: 55px;
+  z-index: 20;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  box-shadow: 0 15px 20px var(--box-shadow-color);
+  animation: anim2 2s infinite;
+}
+
+.loader div {
+  background: var(--Burger-color);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  z-index: -1;
+  animation: anim 2s infinite linear;
+  animation-delay: calc(-0.3s * var(--i));
+  transform: translateY(5px);
+  margin: 0.2em;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-65px);
+  }
+}
+
+@keyframes anim2 {
+
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+/* animation Panier end */
