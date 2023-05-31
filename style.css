@@ -265,11 +265,11 @@ img.SIMG {
 
 }
 
-#menyAvPaa {
+#menyBurG {
   display: none;
 }
 
-#menyAvPaa:checked~#meny {
+#menyBurG:checked~#meny {
   transform: translateX(0rem);
 }
 
@@ -293,19 +293,19 @@ img.SIMG {
   z-index: 999;
 }
 
-#menyAvPaa:checked~#burger>div {
+#menyBurG:checked~#burger>div {
   background-color: var(--Burger-color);
 }
 
-#menyAvPaa:checked~#burger>div:nth-child(1) {
+#menyBurG:checked~#burger>div:nth-child(1) {
   transform: translateY(15px) rotate(45deg);
 }
 
-#menyAvPaa:checked~#burger>div:nth-child(2) {
+#menyBurG:checked~#burger>div:nth-child(2) {
   opacity: 0;
 }
 
-#menyAvPaa:checked~#burger>div:nth-child(3) {
+#menyBurG:checked~#burger>div:nth-child(3) {
   transform: translateY(-15px) rotate(-45deg);
 }
 
