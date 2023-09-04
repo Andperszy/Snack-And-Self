@@ -1,5 +1,5 @@
 <!-- Variables -->
-[website]: https://sns.andperszy.cf/
+[website]: https://andperszy.github.io/Snack-And-Self/
 
 # Snack and Self
 A website for a school project.
